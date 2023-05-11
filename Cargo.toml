@@ -24,7 +24,7 @@ netlink-sys = { version = "0.8" }
 netlink-packet-utils = { version = "0.5" }
 netlink-packet-route = { version = "0.15" }
 netlink-packet-core = { version = "0.5" }
-netlink-proto = { default-features = false, version = "0.11" }
+netlink-proto = { default-features = false, git = "https://github.com/koalo/netlink-proto", branch = "develop/fix-dangling-connection", optional = true }
 nix = { version = "0.26.1", default-features = false, features = ["fs", "mount", "sched", "signal"] }
 tokio = { version = "1.0.1", features = ["rt"], optional = true}
 async-global-executor = { version = "2.0.2", optional = true }
