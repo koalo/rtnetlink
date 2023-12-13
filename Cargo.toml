@@ -22,10 +22,14 @@ futures = "0.3.11"
 log = "0.4.8"
 thiserror = "1"
 netlink-sys = { version = "0.8" }
-netlink-packet-utils = { version = "0.5" }
-netlink-packet-route = { version = "0.18" }
+#netlink-packet-utils = { version = "0.5" }
+netlink-packet-utils = { git = "https://github.com/koalo/netlink-packet-utils", branch = "devel/koalo/add-i64" }
+#netlink-packet-route = { version = "0.18" }
+netlink-packet-route = { git = "https://github.com/koalo/netlink-packet-route", branch = "devel/koalo/taprio" }
+
 netlink-packet-core = { version = "0.7" }
-netlink-proto = { default-features = false, version = "0.11" }
+#netlink-proto = { default-features = false, version = "0.11" }
+netlink-proto = { git = "https://github.com/koalo/netlink-proto", branch = "devel/koalo/fix-warnings" }
 nix = { version = "0.27.1", default-features = false, features = ["fs", "mount", "sched", "signal"] }
 tokio = { version = "1.0.1", features = ["rt"], optional = true}
 async-global-executor = { version = "2.0.2", optional = true }
